@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fruits"
+    android:background="@drawable/background">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backn"
+        android:layout_width="55dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="21dp"
+        app:icon="@drawable/back"
+        app:iconGravity="textEnd"
+        app:iconSize="40sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintlayoutN"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/uzwordN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="504dp"
+            android:text="Bir"
+            android:textAlignment="center"
+            android:textColor="#EA0628"
+            android:textSize="70sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/firstnumber"
+            android:layout_width="327dp"
+            android:layout_height="331dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="160dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/one" />
+
+        <TextView
+            android:id="@+id/engwordN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:text="One"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="65sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nextn"
+            android:layout_width="68dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="284dp"
+            android:layout_marginTop="600dp"
+            app:cornerRadius="50dp"
+            app:icon="@drawable/next"
+            app:iconGravity="textTop"
+            app:iconSize="60sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/prevn"
+            android:layout_width="68dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="600dp"
+            app:cornerRadius="50dp"
+            app:icon="@drawable/prev"
+            app:iconGravity="textEnd"
+            app:iconSize="45sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/voicen"
+            android:layout_width="68dp"
+            android:layout_height="79dp"
+            android:layout_marginStart="168dp"
+            android:layout_marginTop="600dp"
+            app:cornerRadius="50dp"
+            app:icon="@drawable/voice"
+            app:iconSize="40sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearlayoutnumbers"
+        android:layout_width="403dp"
+        android:layout_height="640dp"
+        android:layout_marginBottom="11dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backn">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="5dp">
+
+
+            <ImageView
+                android:id="@+id/raqam1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:tag="0"
+                app:srcCompat="@drawable/one" />
+
+            <ImageView
+                android:id="@+id/raqam2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:tag="1"
+                app:srcCompat="@drawable/two" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/raqam3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:tag="2"
+                app:srcCompat="@drawable/three" />
+
+            <ImageView
+                android:id="@+id/raqam4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:tag="3"
+                app:srcCompat="@drawable/four" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/raqam5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:tag="4"
+                app:srcCompat="@drawable/five" />
+
+            <ImageView
+                android:id="@+id/raqam6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+
+                android:tag="5"
+                app:srcCompat="@drawable/siz" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:id="@+id/raqam7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:tag="6"
+                app:srcCompat="@drawable/seven" />
+
+            <ImageView
+                android:id="@+id/raqam8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:tag="7"
+                app:srcCompat="@drawable/eight" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/raqam9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:tag="8"
+                app:srcCompat="@drawable/nine" />
+
+            <ImageView
+                android:id="@+id/raqam10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:tag="9"
+                app:srcCompat="@drawable/ten" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="Numbers"
+        android:textColor="#601711"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/backn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

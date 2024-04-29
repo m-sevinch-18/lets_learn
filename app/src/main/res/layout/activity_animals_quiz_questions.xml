@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background= "@drawable/background">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/an_v2"
+        android:layout_width="147dp"
+        android:layout_height="186dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="7dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toEndOf="@+id/an_v1"
+        app:layout_constraintTop_toBottomOf="@+id/ll_progress_details"
+        app:shapeAppearanceOverlay="@style/roundingImage"
+        app:srcCompat="@drawable/fox" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/an_v4"
+        android:layout_width="147dp"
+        android:layout_height="186dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="27dp"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintStart_toEndOf="@+id/an_v3"
+        app:layout_constraintTop_toBottomOf="@+id/an_v2"
+        app:shapeAppearanceOverlay="@style/roundingImage"
+        app:srcCompat="@drawable/deer" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/an_v3"
+        android:layout_width="147dp"
+        android:layout_height="186dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="17dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/an_v1"
+        app:shapeAppearanceOverlay="@style/roundingImage"
+        app:srcCompat="@drawable/snake" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/an_v1"
+        android:layout_width="152dp"
+        android:layout_height="196dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="7dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_progress_details"
+        app:shapeAppearanceOverlay="@style/roundingImage"
+        app:srcCompat="@drawable/lion" />
+
+    <TextView
+        android:background="#FFC107"
+        android:id="@+id/an_question"
+        android:layout_width="393dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="34dp"
+        android:text="Choose the animal"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:background="@color/white"
+        android:id="@+id/an_mainword"
+        android:layout_width="393dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="75dp"
+        android:text="Snake"
+        android:textAlignment="center"
+        android:textColor="#512415"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_progress_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="11dp">
+
+
+        <ProgressBar
+            android:id="@+id/an_progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:indeterminate="false"
+            android:max="10"
+            android:minHeight="50dp"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/an_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColorHint="#7A8089"
+            android:textSize="14sp"
+            tools:text="0/8" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/an_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="30dp"
+        android:text="Submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/an_v4" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
