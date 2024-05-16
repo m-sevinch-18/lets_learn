@@ -12,38 +12,48 @@ import androidx.core.view.WindowInsetsCompat
 
 
 class MainActivity : AppCompatActivity() {
-    private var fruitscardview = findViewById<CardView>(R.id.fruitscardview)
-    private var numberscarview = findViewById<CardView>(R.id.numberscarview)
-    private var animalscardview = findViewById<CardView>(R.id.animalscardview)
-    private var quizcardview = findViewById<CardView>(R.id.quizcardview)
+    private lateinit var fruitscardview: CardView
+    private lateinit var numberscarview: CardView
+    private lateinit var animalscardview: CardView
+    private lateinit var quizcardview: CardView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
+        // Initialize views after setContentView
+        fruitscardview = findViewById(R.id.fruitscardview)
+        numberscarview = findViewById(R.id.numberscarview)
+        animalscardview = findViewById(R.id.animalscardview)
+        quizcardview = findViewById(R.id.quizcardview)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets}
-
-            fruitscardview.setOnClickListener {
-                val intent = Intent(this, Fruits::class.java)
-                startActivity(intent)
-            }
-
-            numberscarview.setOnClickListener{
-                val intent = Intent(this, Numbers::class.java)
-                startActivity(intent)
-            }
-
-            animalscardview.setOnClickListener{
-                val intent = Intent(this, Animals::class.java)
-                startActivity(intent)
-            }
-
-            quizcardview.setOnClickListener {
-                val intent = Intent(this,QuizScreen::class.java)
-                startActivity(intent)
-            }
+            insets
         }
 
+        // Set click listener for all card views
+        fruitscardview.setOnClickListener {
+            navigateToActivity(Fruits::class.java)
+        }
+
+        numberscarview.setOnClickListener {
+            navigateToActivity(Numbers::class.java)
+        }
+
+        animalscardview.setOnClickListener {
+            navigateToActivity(Animals::class.java)
+        }
+
+        quizcardview.setOnClickListener {
+            navigateToActivity(QuizScreen::class.java)
+        }
     }
+
+    private fun navigateToActivity(activityClass: Class<*>) {
+        val intent = Intent(this, activityClass)
+        startActivity(intent)
+    }
+}

@@ -14,7 +14,7 @@ object NumbersConstants {
         )
         q.add(
             NumbersQuizQuestions("Write the numbers",R.drawable.eight,
-                R.drawable.three,R.drawable.siz,R.drawable.ten,"eight","three","six","ten")
+                R.drawable.three,R.drawable.six,R.drawable.ten,"eight","three","six","ten")
         )
 
            return q

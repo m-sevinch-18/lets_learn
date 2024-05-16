@@ -10,26 +10,35 @@ import android.widget.Toast
 
 
 class QuizScreen : AppCompatActivity() {
-    private var musicplay = findViewById<Button>(R.id.musicplay)
-    private var volumeoff = findViewById<Button>(R.id.volumeoff)
-    private var quizback = findViewById<Button>(R.id.quizback)
-    private var Fruitsquiz = findViewById<Button>(R.id.Fruitsquiz)
-    private var Animalsquiz = findViewById<Button>(R.id.Animalsquiz)
-    private var numbersquiz = findViewById<Button>(R.id.numbersquiz)
+    private lateinit var musicplay: Button
+    private lateinit var volumeoff: Button
+    private lateinit var quizback: Button
+    private lateinit var Fruitsquiz: Button
+    private lateinit var Animalsquiz: Button
+    private lateinit var numbersquiz: Button
 
+    private var volumeOn = true
 
-    var volumeOn = true
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_screen)
-       var  mediaPlayer = MediaPlayer.create(this, R.raw.back_main_music)
+
+        // Initialize views after setContentView
+        musicplay = findViewById(R.id.musicplay)
+        volumeoff = findViewById(R.id.volumeoff)
+        quizback = findViewById(R.id.quizback)
+        Fruitsquiz = findViewById(R.id.Fruitsquiz)
+        Animalsquiz = findViewById(R.id.Animalsquiz)
+        numbersquiz = findViewById(R.id.numbersquiz)
+
+        // Start background music
+        val mediaPlayer = MediaPlayer.create(this, R.raw.back_main_music)
         mediaPlayer.start()
+
         musicplay.setOnClickListener {
             mediaPlayer.stop()
-            volumeoff.visibility=View.VISIBLE
-            musicplay.visibility =View.GONE
-
-
+            volumeoff.visibility = View.VISIBLE
+            musicplay.visibility = View.GONE
         }
 
         quizback.setOnClickListener {
@@ -51,7 +60,5 @@ class QuizScreen : AppCompatActivity() {
             val intent = Intent(this, NumbersQuiz::class.java)
             startActivity(intent)
         }
-
-
     }
 }
